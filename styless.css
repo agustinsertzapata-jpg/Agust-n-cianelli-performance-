@@ -1,0 +1,163 @@
+/* Paleta Cianelli Performance
+   Negro: #000
+   Amarillo: #f2d100
+   Verde militar: #4b5320
+*/
+
+/* GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0e0e0e;
+    color: #eee;
+}
+
+h2 {
+    color: #f2d100;
+}
+
+/* HERO */
+.hero {
+    background: url("portada.jpg") center/cover no-repeat;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+.hero-text {
+    position: relative;
+    text-align: center;
+}
+
+.hero-text h1 {
+    color: #f2d100;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: #4b5320;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* TARJETAS ACRÍLICO */
+.glass {
+    backdrop-filter: blur(8px);
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CONTENIDO */
+.content {
+    margin: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #4b5320;
+}
+
+/* TESTIMONIOS */
+.testimonials {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #4b5320;
+}
+
+/* PLANES */
+.plans {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    flex: 1;
+    min-width: 260px;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #f2d100;
+}
+
+.price {
+    color: #f2d100;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* FORMULARIO */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #111;
+    border: 2px solid #4b5320;
+    padding: 12px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.send-btn {
+    background: #f2d100;
+    color: #000;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background: #d9b700;
+}
+
+/* WHATSAPP */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+/* ANIMACIÓN FADE-IN */
+.fade-in { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ddd;
+    margin-top: 40px;
+    background: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-text h1 { font-size: 2.2rem; }
+    .plans, .testimonials { flex-direction: column; }
+}
